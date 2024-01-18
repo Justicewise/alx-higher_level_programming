@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 /**
-* _realloc - Reallocates a memory block
-* @ptr: The pointer to the previous memory block
-* @old_size: The size of the old memory block
-* @new_size: The size of the new memory block
-* Return: The pointer to the new memory block otherwise NULL
-**/
-
+ * _realloc - Reallocates a memory block
+ * @ptr: The pointer to the previous memory block
+ * @old_size: The size of the old memory block
+ * @new_size: The size of the new memory block
+ *
+ * Return: The pointer to the new memory block otherwise NULL
+ */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *new_ptr;
@@ -42,11 +42,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 }
 
+
+
 /**
-* check_cycle - checks if a singly linked list has a cycle in it
-* @list: list head
-* Return: 0 if no, 1 if yes
-**/
+ * check_cycle - checks if a singly linked list has a cycle in it
+ * @list: list head
+ * Return: 0 if no, 1 if yes
+ */
 
 int check_cycle(listint_t *list)
 {
@@ -54,6 +56,7 @@ int check_cycle(listint_t *list)
 
 	if (list == NULL)
 		return (0);
+
 	fast = list->next;
 	while (slow != NULL && fast != NULL && fast->next != NULL)
 	{
